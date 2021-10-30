@@ -7,6 +7,7 @@ import pandas as pd
 import time
 import random
 import sys
+import datetime
 import settings
 
 def main():
@@ -61,7 +62,11 @@ def main():
 
     # csvに書き出し
     df= pd.Series(followers)
-    df.to_csv('./csv/' + username + '_follower_list.csv')
+
+    # 現在時刻の取得
+    now = datetime.datetime.now()
+    df.to_csv('csv/' + username + '_follower_list_' + now.strftime('%Y%m%d_%H%M%S') + '.csv')
+
     driver.close()
 
 if __name__ == '__main__':
