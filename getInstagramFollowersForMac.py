@@ -17,7 +17,7 @@ def main():
     # driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
 
     # ログインページに遷移する
-    driver.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
+    browser.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
 
     # 2秒スリープ（待機）
     time.sleep(2)
